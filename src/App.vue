@@ -13,6 +13,9 @@
          @dragstart="startDrag($event, item)">
       {{ item.title }}
     </div>
+    <div v-if="getList(1).length === 0">
+      <p>List is Empty</p>
+    </div>
   </div>
   <div
       class="drop-zone"
@@ -27,6 +30,9 @@
          draggable="true"
          @dragstart="startDrag($event, item)">
       {{ item.title }}
+    </div>
+    <div v-if="getList(2).length === 0">
+      <p>List is Empty</p>
     </div>
   </div>
 </template>
